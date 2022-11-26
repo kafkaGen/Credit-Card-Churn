@@ -1,0 +1,8 @@
+Flask
+wtforms
+flask-wtf
+numpy
+pandas
+scikit_learn
+lightgbm
+yellowbrick

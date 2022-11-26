@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 align=center>Predict</h2>
+
+{% if messages %}
+<div>
+    <ul>
+        {% for message in messages %}
+        <li> {{ message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<p style="font-size:18px; max-width:90vw; text-align:justify; text-indent: 10px;">First, I recommend getting to know the
+    dataset thoroughly, and if you already feel like a pro, then try to make a few
+    predictions of your own.</p>
+
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+
+    {% for field in form %}
+    <p>
+        {{ field.label }}
+        {{ field }}
+        {% for error in field.errors %}<br>
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    {% endfor %}
+</form>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 align=center style="font-size:40px">Credit Card Churn</h1>
+<br>
+<div style="clear:both;">
+    <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" alt="Girl in a jacket" width="400"
+        height="450" style="margin-left:15vw; margin-right:5vw; float:left" />
+    <p style="font-size:22px; max-width:90vw; text-align:justify; text-indent: 50px;">Hello! My name is Oleg! If you got
+        to
+        this page, then you are interested in my experience, so let me tell you what is going on here.</p>
+
+    <p style="font-size:22px; max-width:90vw; text-align:justify; text-indent: 50px;">I created this app with
+        FLASK-RESTful
+        API to visually present the work I did on the <a
+            href="https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers" target="_blank">Credit Card
+            customers</a> kaggle
+        dataset. The problem is trivial - you need to build a model that can correctly classify whether the user is
+        satisfied with banking services, and therefore whether he will remain a client in the future. Since we have
+        highly structured (tabular) data, an effective solution was to use a model based on decision trees. <a
+            href="https://lightgbm.readthedocs.io/en/v3.3.2/" target="_blank">LGBM</a> - fast
+        efficient boosting tree-based model, that has shown itself to be excellent among other candidates. So after
+        creating a complete data preprocessing pipeline and model tuning, you can observe my <a href="perfomance"
+            target="_blank">result</a>. Or just veiw <a>source code</a>.</p>
+
+    <p style="font-size:22px; max-width:90vw; text-align:justify; text-indent: 50px;">You can also visit my <a
+            href="https://github.com/kafkaGen" target="_blank">GitHub page</a> in search of equally
+        interesting projects or view my <a href="https://github.com/kafkaGen/portfolio" target="_blank">portfolio</a>.
+        Feel
+        free to
+        contact me in <a href="https://t.me/boen_dia" target="_blank">Telegram</a> with any questions/suggestions. See
+        you.
+    </p>
+
+    <p style="font-size:22px; max-width:90vw; text-align:justify;">P.S. Special thanks to <a
+            href="https://datarootlabs.com/">DataRoot Labs</a> and the DataRoot University team for an easy journey
+        through
+        the world of Data Science.</p>
+</div>
+<div style="clear:both; margin-top: 8vh;">
+    <p style="font-size:22px; max-width:90vw; text-align:justify; text-indent: 50px;">In the upper left corner you can
+        find
+        a navigation menu to better explore the project:</p>
+
+    <ul style="font-size:22px; max-width:90vw; text-align:justify; margin: 10px 10px 10px 50px;">
+        <li><a href="/index">Home</a> - redirect you exactly to this page</li>
+        <li><a href="/predict">Predict</a> - here you can enter your data to make personal prediction</li>
+        <li><a href="/dataset">Dataset</a> - page for better acquaintisation with dataset</li>
+        <li><a href="/perfomance">Perfomance</a> - place to familarize with model perfomace and achivements</li>
+    </ul>
+</div>
+{% endblock %}

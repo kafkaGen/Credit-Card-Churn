@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    {% if title %}
+    <title>{{ title }} - Credit Card Churn</title>
+    {% else %}
+    <title>Welcome to Credit Card Churn</title>
+    {% endif %}
+</head>
+
+<body></body>
+<div>Menu: <a href=" /index">Home</a> <a href="/predict">Predict</a> <a href="/dataset">Dataset</a> <a
+        href="/perfomance">Perfomance</a></div>
+<hr>
+{% block content %}
+{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<style>
+    table.dataframe,
+    .dataframe th,
+    .dataframe td {
+        border: none;
+        border-bottom: 1px solid #C8C8C8;
+        border-collapse: collapse;
+        text-align: left;
+        padding: 10px;
+        margin-bottom: 40px;
+        font-size: 1.0em;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #eee;
+    }
+
+    tr:nth-child(even) {
+        background-color: #fff;
+    }
+
+    tr:hover {
+        background-color: #ffff99;
+    }
+</style>
+
+<head>
+    {% if title %}
+    <title>{{ title }} - Credit Card Churn</title>
+    {% else %}
+    <title>Welcome to Credit Card Churn</title>
+    {% endif %}
+</head>
+
+<body>
+    <div>Menu: <a href=" /index">Home</a> <a href="/predict">Predict</a> <a href="/dataset">Dataset</a> <a
+            href="/perfomance">Perfomance</a></div>
+    <hr>
+
+    <h2 align=center>Dataset</h2>
+
+    <p style="font-size:18px; max-width:90vw; text-align:justify; text-indent: 10px;">Here you can observe 10 random
+        instances of data from the training dataset. With each refresh of the page, you will
+        receive a new set of random items. Good luck in your experiments!</p>
+
+    {% for table in tables %}
+
+    {{titles[loop.index]}}
+    {{ table|safe }}
+    {% endfor %}
+
+</body>
+
+</html>

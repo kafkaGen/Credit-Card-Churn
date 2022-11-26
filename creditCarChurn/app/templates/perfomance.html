@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 align=center>Perfomance</h2>
+
+<p style="font-size:22px; max-width:90vw; text-align:justify; text-indent: 50px;">LightGBM Classifier was learnt on 8101
+    examples and checked on 2026 examples. Here you can
+    explore the result.</p>
+
+<div style="clear:both;">
+    <img src="{{url_for('static', filename='report.png')}}" style="float:left; width: 49vw;">
+    <img src="{{url_for('static', filename='confusion_matrix.png')}}" style="float:left; width: 49vw;">
+</div>
+
+<div style="clear:both;">
+    <img src="{{url_for('static', filename='importance.png')}}" style="float:left; width: 49vw;">
+    <img src="{{url_for('static', filename='correlation.png')}}" style="float:left; width: 49vw;">
+</div>
+
+{% endblock %}
